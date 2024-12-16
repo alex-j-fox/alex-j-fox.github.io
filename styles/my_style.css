@@ -1,0 +1,52 @@
+div {
+    width: 100%;
+    height: 100%;
+    background-color: cornsilk;
+
+    margin: 20px;
+}
+
+.main {
+    color: blue;
+    width: auto;
+    font-family: 'Georgia', Times, serif;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+.button {
+    color: darkred;
+    font-family: 'Georgia', Times, serif;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+}
+
+.footer {
+    color: gray;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#iframeContainer {
+    width: auto;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 20px;
+}
+
+#iframe {
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}

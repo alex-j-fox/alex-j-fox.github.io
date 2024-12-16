@@ -3,43 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Пробный дизайн</title>
-
-  <style>
-    div {
-      width: 300px;
-      height: 250px;
-      background-color: cornsilk;
-    }
-
-    .main {
-      color: blue;
-      width: auto;
-      font-family: 'Times New Roman', Times, serif;
-      font-size: 24px;
-      text-align: center;
-      line-height: 1.5;
-      padding-top: 50px
-    }
-
-    a {
-      color: darkblue;
-      text-decoration: none;
-    }
-
-    .footer {
-      color: gray;
-      font-size: 16px;
-      text-align: center;
-      margin-top: 20px;
-    }
-  </style>
+  <title>Alexandr Stepenko</title>
+  <link href="styles/my_style.css" rel="stylesheet">
+  
 </head>
+
 <body>
-    <div class="main">
-        <p>Hello, my name is Alexandr!</p>
-        <p>I am junior Python developer and learning how to code with <a href="https://ru.hexlet.io/u/alex-j-fox">Hexlet</a></p>
-    </div>
-    <footer class="footer">Page under construction</footer>
+<div class="main">
+  <p>Hy there, my name is Alex!</p>
+  <p>I am a Python developer and I was learned how to code in <a
+      href="https://ru.hexlet.io/u/alex-j-fox">Hexlet</a></p>
+  <p>I am also studying and developing in 1C-Bitrix and PHP :)</p>
+  <p>Check my resume <button class="button" id="toggleButton">Show</button></p>
+</div>
+
+
+<div id="iframeContainer">
+  <iframe class="hidden" id="iframe" src="Резюме Python-developer - Александр Степенко.pdf" width=60%
+          height="500">
+    Resume Python developer.
+  </iframe>
+</div>
+
+<footer class="footer"><a href="https://github.com/alex-j-fox"><i>Alex J Fox</i></a></footer>
+
+<script>
+    const button = document.getElementById('toggleButton');
+    const iframe = document.getElementById('iframe');
+
+    button.onclick = function() {
+        if (iframe.classList.contains('hidden')) {
+            iframe.classList.remove('hidden');
+            button.textContent = 'Hide';
+        } else {
+            iframe.classList.add('hidden');
+            button.textContent = 'Show';
+        }
+    };
+</script>
 </body>
 </html> 
