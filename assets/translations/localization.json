@@ -1,0 +1,20 @@
+{
+  "en": {
+    "greeting": "Hy there, my name is Alex!",
+    "profession": "I am a Python developer and I learned how to code in",
+    "platform": "Hexlet",
+    "studies": "I am also studying and developing in 1C-Bitrix and PHP :)",
+    "resume": "Check my resume",
+    "buttonShow": "Show",
+    "buttonHide": "Hide"
+  },
+  "ru": {
+    "greeting": "Привет, меня зовут Александр!",
+    "profession": "Я Python разработчик и я получил сертификат о завершении обучения по профессии в",
+    "platform": "Hexlet",
+    "studies": "Я также изучаю и разрабатываю на 1C-Битрикс и PHP :)",
+    "resume": "Здесь мое резюме",
+    "buttonShow": "Показать",
+    "buttonHide": "Скрыть"
+  }
+}

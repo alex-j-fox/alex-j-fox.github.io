@@ -8,6 +8,7 @@ div {
 
 .main {
     color: blue;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     width: auto;
     font-family: 'Georgia', Times, serif;
     font-size: 24px;
@@ -18,15 +19,18 @@ div {
 
 a {
     color: darkred;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
     text-decoration: none;
 }
 
 .button {
     color: darkred;
     font-family: 'Georgia', Times, serif;
-    font-size: 1em;
+    font-size: 0.8em;
+    padding: 8px 12px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
 }
 
 .footer {

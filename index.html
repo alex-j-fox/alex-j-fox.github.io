@@ -3,23 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexandr Stepenko</title>
-  <link href="styles/my_style.css" rel="stylesheet">
+  <title id="title">Alexandr Stepenko</title>
+  <link href="assets/styles/my_style.css" rel="stylesheet">
   
 </head>
 
 <body>
-<div class="main">
-  <p>Hy there, my name is Alex!</p>
-  <p>I am a Python developer and I was learned how to code in <a
-      href="https://ru.hexlet.io/u/alex-j-fox">Hexlet</a></p>
-  <p>I am also studying and developing in 1C-Bitrix and PHP :)</p>
-  <p>Check my resume <button class="button" id="toggleButton">Show</button></p>
-</div>
+<!--<div class="main">-->
+<!--  <p>Hy there, my name is Alex!</p>-->
+<!--  <p>I am a Python developer and I was learned how to code in <a-->
+<!--      href="https://ru.hexlet.io/u/alex-j-fox">Hexlet</a></p>-->
+<!--  <p>I am also studying and developing in 1C-Bitrix and PHP :)</p>-->
+<!--  <p>Check my resume <button class="button" id="toggleButton">Show</button></p>-->
+<!--</div>-->
 
+
+ <div class="main">
+        <p id="greeting"></p>
+        <span id="profession"></span>
+        <a id="platform" href="https://ru.hexlet.io/u/alex-j-fox"></a>
+        <p id="studies"></p>
+        <span id="resume"></span>
+        <button class="button" id="toggleButton"></button>
+    </div>
 
 <div id="iframeContainer">
-  <iframe class="hidden" id="iframe" src="Резюме Python-developer - Александр Степенко.pdf" width=60%
+  <iframe class="hidden" id="iframe" src="assets/documents/Резюме Python-developer - Александр Степенко.pdf" width=60%
           height="500">
     Resume Python developer.
   </iframe>
@@ -40,6 +49,36 @@
             button.textContent = 'Show';
         }
     };
+</script>
+
+<script>
+    // Загрузка локализации
+    fetch('/assets/translations/localization.json')
+        .then(response => response.json())
+        .then(data => {
+            const lang = navigator.language.startsWith('ru') ? 'ru' : 'en'; // Определение языка
+            document.getElementById('greeting').innerText = data[lang].greeting;
+            document.getElementById('profession').innerText = data[lang].profession;
+            document.getElementById('platform').innerText = data[lang].platform;
+            document.getElementById('studies').innerText = data[lang].studies;
+            document.getElementById('resume').innerText = data[lang].resume + ' ';
+            // document.getElementById('toggleButton').innerText = data[lang].button;
+            const toggleButton = document.getElementById('toggleButton');
+            toggleButton.innerText = data[lang].buttonShow; // Устанавливаем начальный текст кнопки
+
+            let isVisible = false; // Состояние видимости
+
+            toggleButton.addEventListener('click', () => {
+                isVisible = !isVisible; // Переключаем состояние
+                if (isVisible) {
+                    // Здесь вы можете показать дополнительный контент
+                    toggleButton.innerText = data[lang].buttonHide; // Меняем текст на "Скрыть"
+                } else {
+                    // Здесь вы можете скрыть дополнительный контент
+                    toggleButton.innerText = data[lang].buttonShow; // Меняем текст на "Показать"
+                }
+            });
+        });
 </script>
 </body>
 </html> 
