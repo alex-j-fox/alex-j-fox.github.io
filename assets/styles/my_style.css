@@ -54,3 +54,7 @@ a {
 .hidden {
     display: none;
 }
+
+#greeting {
+    margin-right: 10px;
+}
